@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- boostrap por medio de CDN -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/solar/bootstrap.min.css">
+    <!-- Este proyeto lo hic en base a este tutorial: https://www.youtube.com/watch?v=yxT6ylPM7uM&t=364s -->
+
+    <title>API para el Clima</title>
+</head>
+<body>
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-4 mx-auto text-center">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 id="lugar-clima" class="h3"></h1>
+                        <h3 id="clima-descripcion"></h3>
+                        <h3 id="clima-texto"></h3>
+                        <ul class="list-group mt-3">
+                            <li id="humedad" class="list-group-item"></li>
+                            <li id="viento" class="list-group-item"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <form id="clima-form">
+                            <div class="form-group">
+                                <input type="text" id="ciudad" class="form-control" placeholder="ciudad" autofocus>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-success btn-block" id="boton">
+                                    Guardar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+</body>
+</html>
