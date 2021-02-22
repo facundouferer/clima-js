@@ -3,12 +3,13 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 var path = require('path');
 
-const devMode = process.env.NODE_ENV != 'production';
+const devMode = process.env.NODE_ENV !== 'development';
 console.log('Entorno de desarrollo: '+devMode);
 
 module.exports = {
     mode: 'development',
     entry: [
+        '@babel/polyfill',
         './src/app/index.js'
     ],
     output: {
