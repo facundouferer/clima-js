@@ -12,7 +12,7 @@ const WeatherInfo = props => {
             {props.ciudad ?
                 <div className="card card-body mt-2 animated fadeInUp">
                     <p>{props.ciudad} ({props.pais})</p>
-                    <h1>Temperatura</h1>                    
+                    <h1>Temperatura</h1>
                     <div className="row">
                         <div className="col-lg-4">
                             <h4>Actual</h4>
@@ -26,6 +26,12 @@ const WeatherInfo = props => {
                             <h4>Mínima</h4>
                             <h2>{props.temp_min} °C</h2>
                         </div>
+                    </div>
+
+                    <div className="alert alert-dismissible alert-success">
+                        <h3>Humedad: <strong>{props.humedad}</strong> %</h3>                        
+                        <h3>Presión: {props.presion} hPa</h3>
+                        <h3>Viento: {props.viento} km/h</h3>
                     </div>
                 </div>
                 :

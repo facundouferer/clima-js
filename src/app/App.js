@@ -9,9 +9,12 @@ class App extends Component {
         temperatura: '',
         ciudad: '',
         pais: '',
-        temperatura:'',
-        temp_max:'',
-        temp_min:'',
+        temperatura: '',
+        temp_max: '',
+        temp_min: '',
+        humedad: '',
+        presion: '',
+        viento: '',
         error: false
     };
 
@@ -32,13 +35,16 @@ class App extends Component {
                     ciudad: datos.name,
                     pais: datos.sys.country,
                     temperatura: datos.main.temp,
-                    temp_max:datos.main.temp_max,
-                    temp_min:datos.main.temp_min,
-                    error:false
+                    temp_max: datos.main.temp_max,
+                    temp_min: datos.main.temp_min,
+                    humedad: datos.main.humidity,
+                    presion: datos.main.pressure,
+                    viento: datos.wind.speed,
+                    error: false
                 }
             );
-        }else{
-            this.setState({error:true})
+        } else {
+            this.setState({ error: true })
         }
 
     }
@@ -49,7 +55,7 @@ class App extends Component {
                 <div className="row">
                     <div className="col-md-6 mx-auto">
                         <h1>el clima en alguna ciudad</h1>
-                        <WeatherForm getWeather={this.getWeather}/>
+                        <WeatherForm getWeather={this.getWeather} />
                         <WeatherInfo {...this.state} />
                     </div>
                 </div>
