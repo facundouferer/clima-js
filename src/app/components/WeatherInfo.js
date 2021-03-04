@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const WeatherInfo = props => {
 
     return (
@@ -11,8 +12,9 @@ const WeatherInfo = props => {
             }
             {props.ciudad ?
                 <div className="card card-body mt-2 animated fadeInUp">
-                    <p>{props.ciudad} ({props.pais})</p>
+                    img
                     <h1>Temperatura</h1>
+                    <img src="nombreimagen.jpg" alt="" />
                     <div className="row">
                         <div className="col-lg-4">
                             <h4>Actual</h4>
